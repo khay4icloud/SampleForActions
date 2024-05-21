@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: Git checkout
+          uses: actions/checkout@v2
+          with:
+            fetch-depth: '0'
       - name: git 
         run: |
           git --version
