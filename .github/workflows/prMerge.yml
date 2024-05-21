@@ -6,8 +6,8 @@ on:
       - closed
 
 jobs:
-  my-action:
-    if: ${{ github.event.pull_request.merged }}
+  if_merged:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - run: echo "🍏 This job's status is ${{ job.status }}."
